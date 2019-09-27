@@ -28,4 +28,9 @@ public class UsersController {
     public ResponseEntity<Optional<Users>> findById(@PathVariable Long id){
         return ResponseEntity.ok(usersService.findById(id));
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteById(@PathVariable Long id){
+         usersService.deleteById(id);
+    }
 }

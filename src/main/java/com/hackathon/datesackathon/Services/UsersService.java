@@ -18,7 +18,8 @@ public class UsersService {
    public List<Users> findUsers(){
        return usersRepo.findAll();
    }
-    public Users findByUserName(String a) {
+
+   public Users findByUserName(String a) {
         Users users = usersRepo.findByUsername(a);
 
         return users;
